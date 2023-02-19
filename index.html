@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Voice Assistant</title>
+  </head>
+  <body>
+    <h1>Voice Assistant</h1>
+    <div id="user-input">
+      <input type="text" id="user-input-field" placeholder="Ask me anything...">
+      <button onclick="sendUserInput()">Send</button>
+    </div>
+    <div id="assistant-response">
+      <p>Waiting for user input...</p>
+    </div>
+    <script>
+      function sendUserInput() {
+        // Get the user input from the input field
+        const userInput = document.getElementById('user-input-field').value;
+
+        // Send the user input to the server for processing
+        // ...
+
+        // Update the assistant response with a loading message
+        const assistantResponse = document.getElementById('assistant-response');
+        assistantResponse.innerHTML = '<p>Loading...</p>';
+
+        // Wait for the server to respond with the assistant's response
+        // ...
+
+        // Update the assistant response with the response from the server
+        assistantResponse.innerHTML = '<p>' + serverResponse + '</p>';
+      }
+    </script>
+  </body>
+</html>
